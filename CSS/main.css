@@ -42,7 +42,7 @@ nav ul li {
 
 nav ul li:hover {
     color: black;
-    transform:scale(1.1);
+    transform: scale(1.1);
 }
 
 a {
@@ -55,7 +55,7 @@ a {
 
 main {
     padding: 1rem;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     max-width: 1200px;
     flex: 1;
     display: flex;
@@ -63,7 +63,13 @@ main {
     justify-content: space-evenly;
 }
 
-h1, h2, h3 {
+h1 {
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3 {
     color: black;
     margin-bottom: 2rem;
     font-family: 'Bebas Neue', sans-serif;
@@ -88,10 +94,14 @@ h1, h2, h3 {
     margin: auto;
 }
 
+.first-section-box-2 a {
+    margin-top: 25%;
+}
+
 button {
     background-color: var(--lightgreen);
     color: white;
-    width: 50%;
+    width: 40%;
     border: none;
     padding: 0.2rem 0.5rem;
     text-align: start;
@@ -100,13 +110,67 @@ button {
     border-radius: 5px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: bold;
+    box-shadow: 1px 1px 2px gray;
 }
 
-button:hover, i:hover {
+button:hover,
+i:hover {
     opacity: 0.7;
     cursor: pointer;
 }
 
+/* cv-modal start */
+
+.cv-modal {
+    display: none;
+}
+
+.modal:target {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.close-tag {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+    position: sticky;
+    float: right;
+    top: 0;
+    right: 2%;
+    z-index: 1;
+}
+
+.modal-content {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80vw;
+    height: 70vh;
+    overflow: scroll;
+    background-color: white;
+    padding: 0 0 5% 5%;
+}
+
+.sticky-h2 {
+    text-align: center;
+    position: sticky;
+    top: 1%;
+}
+
+.modal-content p, .modal-content ul {
+    margin-bottom: 1rem;
+}
+
+.modal-content h4 {
+    color: #0074D9;
+}
+
+/* cv-modal end */
 /* projekt start */
 
 #second-section {
@@ -127,7 +191,7 @@ button:hover, i:hover {
 }
 
 .project-card:hover {
-    cursor:auto;
+    cursor: auto;
 }
 
 span {
@@ -137,24 +201,66 @@ span {
 
 .project-card-1 {
     background-color: #EDEDED;
-    background-image: url(../images/forTheDreamLandingpage.png);
+    background-image: url(../images/forTheDreamLandingpage.jpg);
     background-size: cover;
-} 
+}
+
 .project-card-2 {
     background-color: #444444;
     background-image: url(../images/spelet.png);
 
 }
+
 .project-card-3 {
     background-color: #0074D9;
-    background-image: url();
 }
+
 .project-card-4 {
     background-color: #FF5733;
-    background-image: url();
 }
-/* projekt end */
 
+.project-card-5 {
+    background-color: #fb8500;
+}
+
+.project-card-6 {
+    background-color: #2a9d8f;
+}
+
+.project-card-7 {
+    background-color: #f4a261;
+}
+
+.project-card-8 {
+    background-color: #6096ba;
+}
+
+/* empty-card-modal start */
+
+.empty-card-modal {
+    display: none;
+}
+
+.empty-card-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 150px;
+    background-color: white;
+
+}
+
+.empty-card-modal-content a {
+    margin-right: 1rem;
+}
+.empty-card-modal-content p {
+    margin: 2rem;
+}
+
+/* empty-card-modal end */
+/* projekt end */
 /* main end */
 /* footer start */
 
@@ -193,12 +299,12 @@ li {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
     /* header start */
 
     nav ul li {
         font-size: 1.5rem;
-        transition: transform 2s;
+        margin: 0.4rem;
     }
 
     /* header end */
@@ -207,37 +313,22 @@ li {
     #first-section {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
-    .first-section-boxes {
-        width: 80%;
-    }
-    
-    .first-section-boxes img {
-        width: 80%;
-    }
-
-    /* main end */
-}
-
-@media (max-width: 500px) {
-    /* main start */
-    
-    .first-section-boxes {
-        width: 100%;
+    .first-section-box-2 {
+        text-align: center;
     }
 
     #second-section {
         grid-template-columns: 1fr 1fr;
     }
 
-    .first-section-box-2 {
-        text-align: center;
-    }
-    
     .project-card {
         padding: 0.5rem;
+    }
+
+    .project-card button {
+        width: 50%;
     }
 
     /* main end */
