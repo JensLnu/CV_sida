@@ -2,6 +2,22 @@ main {
     padding: 0 10%;
 }
 
+.project-card-5 {
+    background-color: #fb8500;
+}
+
+.project-card-6 {
+    background-color: #2a9d8f;
+}
+
+.project-card-7 {
+    background-color: #f4a261;
+}
+
+.project-card-8 {
+    background-color: #6096ba;
+}
+
 @media (max-width: 520px) {
     main {
         padding: 1rem;

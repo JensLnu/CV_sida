@@ -5,7 +5,12 @@
 }
 
 :root {
-    --lightgreen: #3cb371;
+    --detail--color--light: #3cb371;
+    --bg--color--light: #fafafa;
+    --text--color--light: black;
+    --detail--color--dark: #3cb371;
+    --bg--color--dark: #343541;
+    --text--color--dark: #fafafa;
 }
 
 body {
@@ -19,7 +24,7 @@ body {
 /* navigergin start */
 
 header {
-    background-color: var(--lightgreen);
+    background-color: var(--detail--color--light);
     padding: 1rem 0;
 }
 
@@ -29,8 +34,8 @@ nav ul {
 }
 
 .thispage {
-    color: black;
-    border-bottom: 2px solid black;
+    color: var(--bg--color--dark);
+    border-bottom: 2px solid var(--bg--color--dark);
 }
 
 nav ul li {
@@ -41,13 +46,12 @@ nav ul li {
 }
 
 nav ul li:hover {
-    color: black;
     transform: scale(1.1);
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--bg--color--light);
 }
 
 /* navigering end */
@@ -71,7 +75,7 @@ h1 {
 h1,
 h2,
 h3 {
-    color: black;
+    color: var(--text--color--light);
     margin-bottom: 2rem;
     font-family: 'Bebas Neue', sans-serif;
 }
@@ -100,8 +104,8 @@ h3 {
 }
 
 button {
-    background-color: var(--lightgreen);
-    color: white;
+    background-color: var(--detail--color--light);
+    color: var(--bg--color--light);
     width: 40%;
     border: none;
     padding: 0.2rem 0.5rem;
@@ -153,7 +157,7 @@ i:hover {
     width: 80vw;
     height: 70vh;
     overflow: scroll;
-    background-color: white;
+    background-color: var(--bg--color--light);
     padding: 0 0 5% 5%;
 }
 
@@ -163,7 +167,8 @@ i:hover {
     top: 1%;
 }
 
-.modal-content p, .modal-content ul {
+.modal-content p,
+.modal-content ul {
     margin-bottom: 1rem;
 }
 
@@ -183,7 +188,7 @@ i:hover {
 .project-card {
     padding: 1rem;
     height: 300px;
-    color: black;
+    color: var(--text--color--light);
     box-shadow: 2px 2px 5px gray;
     display: flex;
     flex-direction: column;
@@ -196,7 +201,7 @@ i:hover {
 }
 
 span {
-    background-color: var(--lightgreen);
+    background-color: var(--detail--color--light);
     border-radius: 2px;
 }
 
@@ -220,22 +225,6 @@ span {
     background-color: #FF5733;
 }
 
-.project-card-5 {
-    background-color: #fb8500;
-}
-
-.project-card-6 {
-    background-color: #2a9d8f;
-}
-
-.project-card-7 {
-    background-color: #f4a261;
-}
-
-.project-card-8 {
-    background-color: #6096ba;
-}
-
 /* empty-card-modal start */
 
 .empty-card-modal {
@@ -249,13 +238,14 @@ span {
     transform: translate(-50%, -50%);
     width: 250px;
     height: 150px;
-    background-color: white;
+    background-color: var(--bg--color--light);
 
 }
 
 .empty-card-modal-content a {
     margin-right: 1rem;
 }
+
 .empty-card-modal-content p {
     margin: 2rem;
 }
@@ -266,7 +256,7 @@ span {
 /* footer start */
 
 footer {
-    background-color: var(--lightgreen);
+    background-color: var(--detail--color--light);
     padding: 1rem;
     margin-top: auto;
     width: 100vw;
@@ -332,5 +322,56 @@ li {
         width: 50%;
     }
 
+    /* main end */
+}
+
+@media (prefers-color-scheme: dark) {
+    /* navigergin start */
+
+    body,
+    .modal-content,
+    .empty-card-modal-content {
+        background-color: var(--bg--color--dark);
+    }
+
+    .thispage {
+        color: var(--bg--color--light);
+        border-bottom: 2px solid var(--bg--color--light);
+    }
+
+    a {
+        color: var(--bg--color--dark);
+    }
+
+    /* navigering end */
+    /* main start */
+    h1,
+    h2,
+    h3,
+    p,
+    li,
+    .close-tag {
+        color: var(--text--color--dark);
+    }
+
+    button, .project-card, .first-section-boxes img {
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    #second-section span {
+        color: var(--text--color--light);
+    }
+
+    /* cv-modal start */
+
+    .close-tag {
+        opacity: 0.4;
+    }
+
+    .modal-content, .empty-card-modal-content {
+        border: 1px solid var(--text--color--dark);
+    }
+
+    /* cv-modal end */
     /* main end */
 }
