@@ -2,10 +2,6 @@ main {
     align-items: center;
 }
 
-h1 {
-    margin: 2rem;
-}
-
 .contact-list li {
     line-height: 2rem;
 }
